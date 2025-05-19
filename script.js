@@ -1,14 +1,14 @@
 //your JS code here. If required.
 let angle = 0;
 
-const rotate = () => {
+document.addEventListener("DOMContentLoaded",()=>{
   const line = document.getElementById("line");
-  console.log(line)
   if (line) {
+	angle = angle + 2;
+    line.style.transform = `rotate(${angle}deg)`;
     setInterval(() => {
       angle = angle + 2;
-      line.style.transform += `rotate(${angle}deg)`;
+      line.style.transform = `rotate(${angle}deg)`;
     }, 2000);
   }
-};
-rotate();
+})
